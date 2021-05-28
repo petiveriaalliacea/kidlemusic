@@ -1,0 +1,53 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2"
+data-toggle="modal" data-target="#exampleModal"
+(click)="addClick()" data-backdrop="static" data-keyboard="false">
+  Add User
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+        (click)="closeClick()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-user [user] = "user" *ngIf ="ActivateAddEditUserComp"></app-add-edit-user>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<table class="table table-strped">
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>User Password</th>
+      <th>Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let dataItem of UserList">
+        <td>{{dataItem.userid}}</td>
+        <td>{{dataItem.username}}</td>
+        <td>{{dataItem.useremail}}</td>
+        <td>{{dataItem.userpassword}}</td>
+        <td>
+          <button type="button" class="btn btn-light mr-1"
+          data-toggle="modal" data-target="#exampleModal"
+          (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false"> Edit </button>
+          <button type="button" class="btn btn-light mr-1"
+          (click)="deleteClick(dataItem)"> Delete </button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>

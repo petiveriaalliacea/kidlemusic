@@ -1,0 +1,20 @@
+
+<!-- <h1>Hello</h1> -->
+<div class = "form-froup row">
+
+  <label class ="col-sm-2 col-form-label">User Registration</label>
+  <div class="col-sm-6 col-centered">
+    <input type="text" class="form-control" [(ngModel)]="UserName" placeholder="User Name" required>
+    <input type="text" class="form-control" [(ngModel)]="UserEmail" placeholder="Email" required>
+    <input type="text" class="form-control" [(ngModel)]="UserPassword" placeholder="Password" required>
+  </div>
+
+</div>
+
+<button (click)="addUser()" *ngIf="user.UserId == 0" class = "btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateUser()" *ngIf="user.UserId != 0" class = "btn btn-primary">
+  Update
+</button>

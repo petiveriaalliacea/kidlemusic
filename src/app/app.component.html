@@ -1,0 +1,29 @@
+
+
+<app-top-menu></app-top-menu>
+<app-que-bar></app-que-bar>
+
+<div class="w3-container main">
+  <div class="topnav">
+    <!-- <a [routerLink]= "['']" routerLinkActive = 'active' [routerLinkActiveOptions]="{exact: true}">MusicPlatform</a> <br>
+    <a [routerLink]= "['/catagories']" routerLinkActive = 'active' [routerLinkActiveOptions]="{exact: true}" *ngIf = 'isLoggedIn'>Uploads</a>
+
+    <mat-card *ngIf = '!isLoggedIn'>
+      <mat-form-field class = "example-form-filed">
+        <mat-label>Email</mat-label>
+        <input type = "email" matInput placeholder="user@email.com" #email>
+      </mat-form-field>
+      <mat-form-field class = "example-form-filed">
+        <mat-label>Password</mat-label>
+        <input type = "password" matInput #password>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)='login(email.value, password.value)'>Login</button>
+    </mat-card>
+
+    <mat-card *ngIf ='isLoggedIn'>
+      <button mat-flat-button color="primary" (click)='logout()'>Logout</button>
+    </mat-card> -->
+<router-outlet></router-outlet>
+</div>
+</div>
+<app-player-bar></app-player-bar>

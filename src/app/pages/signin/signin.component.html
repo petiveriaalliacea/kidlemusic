@@ -1,0 +1,53 @@
+<!-- <br><br><br>
+<div class="container-fluid ">
+  <div class="row justify-content-center">
+    <div class="col-6">
+  <h2>Sign in</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <small class="float-right" [routerLink]="['/signup']">New user? Sign up!</small>
+  </div>
+  </div>
+</div> -->
+
+
+<br><br><br>
+<div class="container">
+<br>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Log In / Sign In</h4>
+	<form>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email" type="email" (change)="ClickedEmail($event)">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Password" type="password" (change)="ClickedPasswrod($event)">
+    </div> <!-- form-group// -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" (click)="getMessage()"> Sign In </button>
+    </div> <!-- form-group// -->
+    <p class="text-center">Do not have account? <a [routerLink]="['/signup']">Sign up</a> </p>
+</form>
+</article>
+</div>
+
+</div>

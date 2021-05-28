@@ -1,0 +1,45 @@
+<div class="bar">
+    <input class="ml-2 mt-3 w-100" type="range"
+        min="0"
+        [max]="duration"
+        step="0.01"
+        #seek (input)="setSeek(seek.value)"
+        [value]="currentTime"
+    >
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-3 col-3 py-3">
+              <div class="btn-group">
+                <button class="btn btn-defaulf" (click)="previous()" [disabled]="isStart()">
+                    <i class="fa fa-backward" aria-hidden="true"></i>
+                </button>
+                <button (click)="play()" *ngIf="!isPlay" title="Play" class="btn btn-success">
+                    <i class="fa fa-play"></i>
+                </button>
+                <button (click)="pause()" *ngIf="isPlay" title="Pause" class="btn btn-warning">
+                    <i class="fa fa-pause"></i>
+                </button>
+                <button class="btn btn-defaulf" (click)="next()" [disabled]="isEnd()">
+                    <i class="fa fa-forward" aria-hidden="true"></i>
+                </button>
+            </div>
+            </div>
+            <div class="col-md-6 col-9">
+            </div>
+            <div class="col-md-3 py-2 d-none d-md-block">
+                <button class="w3-btn w3-circle w3-ripple w3-blue">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                </button>
+                <input class="ml-2 mt-3" type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                 #vol (input)="setVolume(vol.value)" [value]="valume">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

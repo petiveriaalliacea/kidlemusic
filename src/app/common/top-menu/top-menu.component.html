@@ -1,0 +1,29 @@
+<div class="w3-top">
+<div class="w3-bar w3-black top-menu">
+        <div class="w3-bar-item logo">
+            <a routerLink="/">
+                <img src="./assets/imgs/logo.png" width="60" title="Kidle"> <strong>K</strong>idle
+            </a>
+        </div>
+
+        <div class="d-block">
+          <a routerLink="/songs" class="w3-bar-item w3-button w3">Songs</a>
+          <a routerLink="" class="w3-bar-item w3-button w3">Find</a>
+            <!-- <form class="form">
+                <input class="w3-bar-item w3-input" type="text">
+                <input class="w3-bar-item w3-button w3-black" type="button" value="Search">
+            </form> -->
+        </div>
+
+        <div class="d-none d-sm-none d-md-block">
+            <!-- This is the right part -->
+            <!-- <a routerLink="/signup" class="w3-bar-item w3-button w3-right">Signup</a> -->
+            <a routerLink="/user" class="w3-bar-item w3-button w3-right">Signin</a>
+            <!-- <a routerLink="/user/registration" class="w3-bar-item w3-button w3-right">Signup</a> -->
+        </div>
+
+        <div class="d-none d-sm-none d-md-block w3-right">
+          <button class="btn btn-danger my-2 my-sm-0" *ngIf = 'isLoggedIn' (click)="onLogout()">Logout</button>
+      </div>
+</div>
+</div>

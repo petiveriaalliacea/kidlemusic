@@ -1,0 +1,22 @@
+<mat-card>
+  <span>Our Songs:</span>
+    <mat-table [dataSource]="musics">
+      <ng-container matColumnDef ="id">
+        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-cell *matCellDef="let music">{{music.id}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef ="author">
+        <mat-header-cell *matHeaderCellDef>Author</mat-header-cell>
+        <mat-cell *matCellDef="let music">{{music.author}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef ="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let music">{{music.title}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns:columns;"></mat-row>
+    </mat-table>
+</mat-card>
